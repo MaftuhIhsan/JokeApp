@@ -1,0 +1,71 @@
+import 'package:flutter/material.dart';
+import 'package:jokeapp/halaman_daftarlistjoke.dart';
+import 'package:jokeapp/halaman_detailjoke.dart';
+import 'package:jokeapp/joke.dart';
+
+class HalamanAdaptiveState extends StatefulWidget {
+  const HalamanAdaptiveState({Key? key}) : super(key: key);
+
+  @override
+  _HalamanAdaptiveStateState createState() => _HalamanAdaptiveStateState();
+}
+
+class _HalamanAdaptiveStateState extends State<HalamanAdaptiveState> {
+  late Joke pilihanjoke;
+
+  // Widget buildNotTablet() {
+  //   return HalamanListJoke(pilihanJokeCallback: (pilihan) {
+  //     Navigator.push(
+  //         context,
+  //         MaterialPageRoute(
+  //             builder: (context) => HalamanDetailJoke(
+  //                   cekDeviceLayout: false,
+  //                   joke: pilihan,
+  //                 )));
+  //   });
+  // }
+  //
+  // Widget buildTablet() {
+  //   return Row(
+  //     children: <Widget>[
+  //       Flexible(
+  //         child: Material(
+  //           elevation: 16,
+  //           child: HalamanListJoke(
+  //             pilihanJokeCallback: (pilihan) {
+  //               setState(() {
+  //                 pilihanjoke = pilihan;
+  //               });
+  //             },
+  //             pilihanJoke: pilihanjoke,
+  //           ),
+  //         ),
+  //       ),
+  //       Flexible(
+  //           child: HalamanDetailJoke(
+  //         cekDeviceLayout: true,
+  //         joke: pilihanjoke,
+  //       ))
+  //     ],
+  //   );
+  // }
+
+  @override
+  Widget build(BuildContext context) {
+    Widget content;
+    var ukuranLayar = MediaQuery.of(context).size.shortestSide;
+    var orientasiLayar = MediaQuery.of(context).orientation;
+    if (orientasiLayar == Orientation.portrait && ukuranLayar < 600) {
+      // content = buildNotTablet();
+    } else {
+      // content = buildTablet();
+    }
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Joke App'),
+      ),
+      backgroundColor: Colors.pinkAccent,
+    );
+  }
+}
