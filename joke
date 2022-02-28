@@ -1,0 +1,44 @@
+import 'package:flutter/material.dart';
+
+class Joke {
+  Joke(
+      {required this.id,
+        required this.type,
+        required this.setup,
+        required this.punchline});
+
+  final int id;
+  final String type;
+  final String setup;
+  final String punchline;
+}
+
+final List<Joke> jokeList = <Joke>[
+  Joke(
+      id: 1,
+      type: "Joke 1",
+      setup:
+      "Antara besi 50 kg dengan kapas 50 kg pas kalu dijatuhkan di kaki, nanti sakitan mana?",
+      punchline: "Ya sakitan kakinya."),
+  Joke(
+      id: 2,
+      type: "Joke 2",
+      setup:
+      "Dia membuat karya, pas jadi hasil karya tersebut diinjak-injak tidak marah, siap coba?",
+      punchline: "Pembuat sandal."),
+  Joke(
+      id: 3,
+      type: "Joke 3",
+      setup: "Hitam, putih, merah, apakah itu?",
+      punchline: "Zebra abis dikerokin"),
+  Joke(
+      id: 4,
+      type: "Joke 4",
+      setup: "Telor apa yang sangar?",
+      punchline: "Telor asin, soalnya ada tatonya."),
+  Joke(
+      id: 5,
+      type: "Joke 5",
+      setup: "Telor asin takut ama siapa?",
+      punchline: "Ama telor puyuh, sebab tatonya lebih banyak"),
+];
