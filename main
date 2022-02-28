@@ -1,0 +1,37 @@
+import 'package:flutter/material.dart';
+import 'package:jokeapp/halaman_adaptive.dart';
+import 'package:jokeapp/halaman_daftarlistjoke.dart';
+import 'package:jokeapp/joke.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: JokeListAja(),
+    );
+  }
+}
+
+// class HomeJoke extends StatefulWidget {
+//   late final Joke pilihanJoke;
+//   late final ValueChanged<Joke> pilihanJokeCallback;
+//
+//   HomeJoke({required Key key, required this.pilihanJokeCallback, required this.pilihanJoke})
+//   : super (key: key)
+//
+//   @override
+//   _HomeJokeState createState() => _HomeJokeState();
+// }
+//
+// class _HomeJokeState extends State<HomeJoke> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container();
+//   }
+// }
